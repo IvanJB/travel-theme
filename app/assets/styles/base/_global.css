@@ -1,6 +1,12 @@
+/*---------------------------------------------------------*/
+/*  Stylesheet composite starts here for ClearViewEscapes  */
+/*---------------------------------------------------------*/
+
 body {
     font-family: 'Roboto', sans-serif;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 img {

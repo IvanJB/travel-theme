@@ -444,6 +444,14 @@ img {
     height: auto;
 }
 
+@defint-mixin cleafix {
+      &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
 /* Nested .large-hero CSS Selectors */
 
 .large-hero {
@@ -618,3 +626,26 @@ img {
 .headline--b-margin-large {
   margin-bottom: 1.6em;
 }
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.row__4 {
+  float: left;
+  width: 33.33%;
+}
+
+.row__8 {
+  float: left;
+  width: 66.66%;
+}
+
+/*.clear-me:before,
+.clear-me:after {
+    display: table;
+    content: "";
+    clear: both;
+} not ideal for clearing floats */

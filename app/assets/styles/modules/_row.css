@@ -1,19 +1,27 @@
+/* Nested .row CSS Selectors */
+
 .row {
     
     @mixin clearfix;
     
+    &--gutters {
+        margin-right: -65px;
+    }
+    
     &--gutters > div {
         padding-right: 65px;
-        box-sizing: border-box;
     }
     
-    &__4 {
+    @mixin atMedium {
+        &__medium-4 {
         float: left;
         width: 33.33%;
+        }
+
+        &__medium-8 {
+            float: left;
+            width: 66.66%;
+        }    
     }
     
-    &__8 {
-        float: left;
-        width: 66.66%;
-    }
 }

@@ -444,12 +444,8 @@ img {
     height: auto;
 }
 
-@defint-mixin cleafix {
-      &::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
+* {
+    box-sizing: border-box;
 }
 
 /* Nested .large-hero CSS Selectors */
@@ -544,12 +540,17 @@ img {
   }
 }
 
+/* max-width: 1200px .wrapper CSS Selectors */
+
+/* max-width: 976px .wrapper--medium CSS Selectors */
+
 .wrapper {
     padding-left: 18px;
     padding-right: 18px;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
 }
 
 .wrapper--medium {
@@ -560,6 +561,8 @@ img {
   padding-left: 0;
   padding-right: 0;
 }
+
+/* Nested .page-sections CSS Selectors */
 
 .page-section {
     padding: 1.2rem 0;
@@ -576,6 +579,8 @@ img {
   background-color: #2f5572;
   color: #fff;
 }
+
+/* Nested .headline CSS Selectors */
 
 .headline {
 	font-weight: 300;
@@ -627,25 +632,31 @@ img {
   margin-bottom: 1.6em;
 }
 
+/* Nested .row CSS Selectors */
+
 .row::after {
   content: "";
   clear: both;
   display: table;
 }
 
-.row__4 {
-  float: left;
-  width: 33.33%;
+.row--gutters {
+  margin-right: -65px;
 }
 
-.row__8 {
-  float: left;
-  width: 66.66%;
+.row--gutters > div {
+  padding-right: 65px;
 }
 
-/*.clear-me:before,
-.clear-me:after {
-    display: table;
-    content: "";
-    clear: both;
-} not ideal for clearing floats */
+@media (min-width: 800px) {
+
+  .row__medium-4 {
+    float: left;
+    width: 33.33%;
+  }
+
+  .row__medium-8 {
+    float: left;
+    width: 66.66%;
+  }
+}

@@ -1,3 +1,5 @@
+/* Nested .headline CSS Selectors */
+
 .headline {
 	font-weight: 300;
     color: $mainBlue;

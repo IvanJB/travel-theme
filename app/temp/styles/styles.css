@@ -448,6 +448,10 @@ img {
     box-sizing: border-box;
 }
 
+a {
+    color: #d59541;
+}
+
 /* Nested .large-hero CSS Selectors */
 
 .large-hero {
@@ -547,7 +551,7 @@ img {
 .wrapper {
     padding-left: 18px;
     padding-right: 18px;
-    max-width: 1200px;
+    max-width: 1236px;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
@@ -560,6 +564,17 @@ img {
 .wrapper .wrapper {
   padding-left: 0;
   padding-right: 0;
+}
+
+.wrapper--b-margin {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 530px) {
+
+  .wrapper--b-margin {
+    margin-bottom: 3.875rem;
+  }
 }
 
 /* Nested .page-sections CSS Selectors */
@@ -632,6 +647,10 @@ img {
   margin-bottom: 1.6em;
 }
 
+.headline--no-t-margin {
+  margin-top: 0;
+}
+
 /* Nested .row CSS Selectors */
 
 .row::after {
@@ -648,15 +667,53 @@ img {
   padding-right: 65px;
 }
 
+.row__b-margin-until-medium {
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 800px) {
+
+  .row__b-margin-until-medium {
+    margin-bottom: 0;
+  }
 
   .row__medium-4 {
     float: left;
     width: 33.33%;
   }
 
+  .row__medium-4-larger {
+    width: 37%;
+  }
+
   .row__medium-8 {
     float: left;
     width: 66.66%;
   }
+
+  .row__medium-8-smaller {
+    width: 63%;
+  }
+}
+
+/*****************************/
+
+/* Generic Content Container */
+
+/*****************************/
+
+.generic-content-container p {
+  line-height: 1.65;
+  margin: 1.8rem 0;
+}
+
+@media (min-width: 530px) {
+
+  .generic-content-container p {
+    font-size: 1.0525rem;
+  }
+}
+
+.generic-content-container p a {
+  font-weight: 700;/* a font-weight of 400 is normal */
 }
